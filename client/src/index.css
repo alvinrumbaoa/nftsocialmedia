@@ -3,4 +3,5 @@ body {
     background-image: url("https://i.pinimg.com/originals/91/36/35/9136359d1367bf96a345266859cdf919.png");
     background-repeat: no-repeat;
     background-position: center;
+    object-fit: cover;
 }
