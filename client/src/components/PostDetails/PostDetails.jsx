@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import { Paper, Typography, CircularProgress, Divider } from '@material-ui/core/';
-import { useDispatch, useSelector } from 'react-redux';
+import { CircularProgress, Divider, Paper, Typography } from '@material-ui/core/';
 import moment from 'moment';
-import { useParams, useHistory } from 'react-router-dom';
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
 import { getPost, getPostsBySearch } from '../../actions/posts';
 import CommentSection from './CommentSection';
 import useStyles from './styles';
+
 
 const Post = () => {
   const { post, posts, isLoading } = useSelector((state) => state.posts);
@@ -69,7 +69,7 @@ const Post = () => {
                 <Typography gutterBottom variant="subtitle2">{name}</Typography>
                 <Typography gutterBottom variant="subtitle2">{message}</Typography>
                 <Typography gutterBottom variant="subtitle1">Likes: {likes.length}</Typography>
-                <img src={selectedFile} width="200px" />
+                <img src={selectedFile} width="200px" alt="selectImage" />
               </div>
             ))}
           </div>
